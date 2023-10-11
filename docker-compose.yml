@@ -1,0 +1,30 @@
+version: "3"
+services:
+  saml:
+    image: my_apache
+    build:
+      context: .
+      dockerfile: Dockerfile
+    restart: always
+    ports:
+      - 80:80
+      - 443:443
+    volumes:
+      - ./apache.conf:/etc/apache2/sites-enabled/apache.conf
+      - ./idp.xml:/usr/local/apache2/idp.xml
+      - ./urn_grafana.xml:/usr/local/apache2/urn_grafana.xml
+      - ./urn_grafana.cert:/usr/local/apache2/urn_grafana.crt
+      - ./urn_grafana.key:/usr/local/apache2/urn_grafana.key
+      - ./server.crt:/etc/ssl/certs/mycert.crt
+      - ./server.key:/etc/ssl/certs/mycert.key
+  
+  grafana:
+    image: grafana/grafana:latest
+    restart: unless-stopped
+    volumes:
+      - ./grafana_data:/var/lib/grafana
+      - ./grafana.ini:/etc/grafana/grafana.ini
+    user: "0"
+    ports:
+    - 3000:3000
+  

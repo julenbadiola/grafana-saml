@@ -1,0 +1,31 @@
+<EntityDescriptor entityID="urn:grafana" xmlns="urn:oasis:names:tc:SAML:2.0:metadata"
+    xmlns:ds="http://www.w3.org/2000/09/xmldsig#">
+    <SPSSODescriptor protocolSupportEnumeration="urn:oasis:names:tc:SAML:2.0:protocol">
+        <KeyDescriptor use="signing">
+            <ds:KeyInfo xmlns:ds="http://www.w3.org/2000/09/xmldsig#">
+                <ds:X509Data>
+                    <ds:X509Certificate>MIICrzCCAZcCFC2AYuQd/TddbijDDpb50MoQry6bMA0GCSqGSIb3DQEBCwUAMBQx
+                        EjAQBgNVBAMMCWxvY2FsaG9zdDAeFw0yMzEwMTExNzU3NDRaFw0zMzEwMTAxNzU3
+                        NDRaMBQxEjAQBgNVBAMMCWxvY2FsaG9zdDCCASIwDQYJKoZIhvcNAQEBBQADggEP
+                        ADCCAQoCggEBALb/llSQV3pcqVz4NpsF/ut/bhLY/2VE3CFLBahuJyQk4iqJywgY
+                        FgUGgV2TGwTrEz9yGcAxsbdTWusz8K+VfpKIIdC/1SZ9dJP229M1+CFMSbfWbhOz
+                        1CefdNUUzwL/U8SiqokvlXGfvj1nkI+5Dec+3bz0ge+m2lVE3bJcTBFxfTMlMruS
+                        Wgmbftb2D3G2otuYnL2raX/oGcgYE/UvxhZ7mQfYWBsEqDFbwlat99DABrVc2OYJ
+                        4+RatVFf13/1F3lLinxcjT+rSsTVXHAA4p41yMWe6RqSJVLNo1d1A7ZFexAGbOOd
+                        xIC0VfGxR9B8xsv3RsaF2ki7JcTbmR1g1CcCAwEAATANBgkqhkiG9w0BAQsFAAOC
+                        AQEAH2WYw2A8GUk8AA/+Jsik3kINZZsRFUOMu/Ft5hl0DqLRdhtUpxTe7D8fePFH
+                        Jmip3WD4fU2E/rkConuBH5q2q4w8eQd4/FQFPmvQvone3Ug08aJ6PuMrKpI80zEx
+                        +188kRYlwOfqv7TtGrc2tqQmwSKsQ4YTJSoo7e5I2loZ7sZTG3CFF3n4qNEK9kOt
+                        WmhNMALCWufFAR0WVDoKcY8ULfOm2H9/N57gsGr5+VIFLnb+bfQe560OlHYZzpYZ
+                        JSOBIa4sSc1uzrLRiv0YrkpSnDgYhkKMNRbxX0zuEpgZyOrokKcfltNgwoLYrrou
+                        sYDlKGF9Kbl/jAeBvmkmjucmcA==</ds:X509Certificate>
+                </ds:X509Data>
+            </ds:KeyInfo>
+        </KeyDescriptor>
+        <SingleLogoutService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-Redirect"
+            Location="https://localhost/secret/endpoint/logout" />
+        <AssertionConsumerService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST"
+            Location="https://localhost/secret/endpoint/postResponse" index="0" />
+    </SPSSODescriptor>
+</EntityDescriptor>
+  
