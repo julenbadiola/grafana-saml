@@ -8,11 +8,29 @@ Then, grafana uses this header to create the user's session.
 
 ## Run the example
 
+1. Create an account in Okta
+   
+https://www.okta.com/free-trial/
+
+2. Create a SAML app in Okta
+
+![Create APP](/images/app.png)
+
+3. Set the needed attributes in the app
+
+![Settings](/images/settings.png)
+
+4. Copy the XML data and modify the idp.xml file
+
+![XML](/images/xml.png)
+
+
+5. Run the docker-compose
 ```
 docker-compose up -d
 ```
 
-and navigate to:
+6. Navigate to:
 
 https://localhost
 

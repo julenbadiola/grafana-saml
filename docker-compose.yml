@@ -15,8 +15,8 @@ services:
       - ./urn_grafana.xml:/usr/local/apache2/urn_grafana.xml
       - ./urn_grafana.cert:/usr/local/apache2/urn_grafana.crt
       - ./urn_grafana.key:/usr/local/apache2/urn_grafana.key
-      - ./server.crt:/etc/ssl/certs/mycert.crt
-      - ./server.key:/etc/ssl/certs/mycert.key
+      - ./ssl/server.crt:/etc/ssl/certs/mycert.crt
+      - ./ssl/server.key:/etc/ssl/certs/mycert.key
   
   grafana:
     image: grafana/grafana:latest
